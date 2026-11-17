@@ -1,0 +1,72 @@
+{
+  "kql/03-mfa-fatigue.kql": {
+    "owner": "mike",
+    "sha256": "cc9ed7f6898efdcd146a64b24724dbae7411c910b619b2efc4a681ceebc7d435",
+    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/03-mfa-fatigue.kql"
+  },
+  "kql/06-inbox-rule-changes.kql": {
+    "owner": "mike",
+    "sha256": "862f9ad6f37b775cbf303619a403b8bd863847c8c6f82036fb480b5a689fb166",
+    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/06-inbox-rule-changes.kql"
+  },
+  "kql/08-auth-method-change-after-risk.kql": {
+    "owner": "mike",
+    "sha256": "c58eda71f8023512cb87c7112deba1e311408d43946123175f848d3a8069528d",
+    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/08-auth-method-change-after-risk.kql"
+  },
+  "kql/09-device-code-signins.kql": {
+    "owner": "mike",
+    "sha256": "143f5ccec71abcb163b1d797acb4e12e9a05dad4bfe1863d39a81782a7167444",
+    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/09-device-code-signins.kql"
+  },
+  "kql/SuccessfulSignInAfterAccountDisabled.yaml": {
+    "owner": "mike",
+    "sha256": "c540dc52dffd2d89b5a9b642b6379e17233d47a7057f09da9904442d0c11ac53",
+    "source": "Azure/Azure-Sentinel PR #15555 (merged), branch head d6f2b4e4cce1b8db884b1fe478a1a333edbb94fa"
+  },
+  "kql/SuccessfulSignInAfterAdminPasswordReset.yaml": {
+    "owner": "mike",
+    "sha256": "bc67c28ff18c3641a80563166b1d2b8ad672cf29bc88181c83eb5e05c90a23e3",
+    "source": "Azure/Azure-Sentinel PR #15656 (open), branch head d2d0376585a410b8ffbb1908764259ecf5f171c0"
+  },
+  "kql/SuccessfulSignInAfterSessionRevocation.yaml": {
+    "owner": "mike",
+    "sha256": "3c4878c86fb851d9955de90a7daa850d49b5178b4ab0a65cd65993f920427f16",
+    "source": "Azure/Azure-Sentinel PR #15653 (open), branch head 2662278291fa91f9e2a44a1c1a56ac67f4c1da5c"
+  },
+  "sigma/mike-draft/azure_auditlogs_security_info_change.yml": {
+    "owner": "mike",
+    "sha256": "74cc7805042f1340d83cd349dbaade333ab7f7606dc6876bbb04d2a5fd3c8019",
+    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (Sigma correlation rules are on hold, see #5759)"
+  },
+  "sigma/mike-draft/azure_identity_protection_user_risk_medium_high.yml": {
+    "owner": "mike",
+    "sha256": "9541093797adac1c5b0398550d4e60e4ff5201654e12cab5e32fb320a761ff68",
+    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (Sigma correlation rules are on hold, see #5759)"
+  },
+  "sigma/mike-draft/correlation_azure_auth_method_change_after_risk.yml": {
+    "owner": "mike",
+    "sha256": "4ffb30e0bd64cf63829202bdb24be5e0e88ec6607b6ef396ba58a92a31b418d5",
+    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (Sigma correlation rules are on hold, see #5759)"
+  },
+  "sigma/upstream/azure_app_device_code_authentication.yml": {
+    "owner": "upstream",
+    "sha256": "86b77dcf54abe01d3a9eaeed7532ebbece4059f9b232ad62c061f40df356e51f",
+    "source": "SigmaHQ/sigma@54967d64e6dda2b4daa81f47f7a8bf1f591b68a0 (master) rules/cloud/azure/signin_logs/"
+  },
+  "sigma/upstream/azure_change_to_authentication_method.yml": {
+    "owner": "upstream",
+    "sha256": "b5f0dda93aa123d14cb73c0f5bf81be94be2b4df18a1bba211db8db4e16eb662",
+    "source": "SigmaHQ/sigma@54967d64e6dda2b4daa81f47f7a8bf1f591b68a0 (master) rules/cloud/azure/audit_logs/"
+  },
+  "sigma/upstream/azure_identity_protection_password_spray.yml": {
+    "owner": "upstream",
+    "sha256": "e89f71ea7ad5e5f2de5c99dc9888562e0f320a460c734bdf946078a5ddd1308b",
+    "source": "SigmaHQ/sigma@54967d64e6dda2b4daa81f47f7a8bf1f591b68a0 (master) rules/cloud/azure/identity_protection/"
+  },
+  "sigma/upstream/microsoft365_susp_email_forwarding_activity.yml": {
+    "owner": "upstream",
+    "sha256": "87c053c36bf155c0176f4df7bb1772d8352dbd073fdbbf6b8f72b4549a0a283c",
+    "source": "SigmaHQ/sigma@54967d64e6dda2b4daa81f47f7a8bf1f591b68a0 (master) rules-threat-hunting/cloud/m365/audit/"
+  }
+}

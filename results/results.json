@@ -1,0 +1,208 @@
+[
+  {
+    "detail": "unsupported KQL construct 'aggregate:make_set_if' (no DuckDB mapping in this wave; see translate/functions.py)",
+    "hits": [],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 0,
+    "rule": "K03",
+    "scenario": "mfa_fatigue",
+    "status": "ENGINE_UNSUPPORTED",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "alice",
+      "carmen"
+    ],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 2,
+    "rule": "K03a",
+    "scenario": "mfa_fatigue",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "gabe",
+      "hana",
+      "kai",
+      "lena"
+    ],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 4,
+    "rule": "K06",
+    "scenario": "inbox_forwarding",
+    "status": "FAIL",
+    "unexpected": [
+      "kai"
+    ]
+  },
+  {
+    "detail": "",
+    "hits": [
+      "mara"
+    ],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 1,
+    "rule": "K08",
+    "scenario": "auth_method_after_risk",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "dana",
+      "eli"
+    ],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 2,
+    "rule": "K09",
+    "scenario": "device_code",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "tara",
+      "wade"
+    ],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 2,
+    "rule": "S15555",
+    "scenario": "signin_after_disable",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "xena"
+    ],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 1,
+    "rule": "S15656",
+    "scenario": "signin_after_admin_reset",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "xena"
+    ],
+    "kind": "kql",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 1,
+    "rule": "S15653",
+    "scenario": "signin_after_revocation",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "mara",
+      "quinn"
+    ],
+    "kind": "sigma",
+    "missed": [],
+    "observed": [],
+    "owner": "mike",
+    "rows": 2,
+    "rule": "SG-CORR",
+    "scenario": "auth_method_after_risk",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "gabe",
+      "ivan",
+      "lena"
+    ],
+    "kind": "sigma",
+    "missed": [],
+    "observed": [],
+    "owner": "upstream",
+    "rows": 3,
+    "rule": "SG-FWD",
+    "scenario": "inbox_forwarding",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "mara",
+      "nico",
+      "omar",
+      "pia",
+      "quinn"
+    ],
+    "kind": "sigma",
+    "missed": [],
+    "observed": [],
+    "owner": "upstream",
+    "rows": 5,
+    "rule": "SG-AUTHM",
+    "scenario": "auth_method_after_risk",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "",
+    "hits": [
+      "rita"
+    ],
+    "kind": "sigma",
+    "missed": [],
+    "observed": [],
+    "owner": "upstream",
+    "rows": 1,
+    "rule": "SG-SPRAY",
+    "scenario": "password_spray",
+    "status": "PASS",
+    "unexpected": []
+  },
+  {
+    "detail": "rule field 'properties.message' does not exist in the Sentinel-shaped events",
+    "hits": [],
+    "kind": "sigma",
+    "missed": [],
+    "observed": [],
+    "owner": "upstream",
+    "rows": 0,
+    "rule": "SG-DEVCODE",
+    "scenario": "device_code",
+    "status": "FIELD_MISSING",
+    "unexpected": []
+  }
+]

@@ -1,0 +1,33 @@
+title: Entra ID User Security Info Registered Or Deleted
+id: 79409509-2f67-4282-80e9-08e215b7b8a0
+name: azure_auditlogs_security_info_change
+status: experimental
+description: |
+    Detects a security info (authentication method) registration or deletion for a user, whether performed by the user or by an administrator.
+    This rule is a building block for the correlation rule "Entra ID Authentication Method Change After Risk Detection" and is not meant to alert on its own.
+references:
+    - https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-audit-activities
+    - https://learn.microsoft.com/en-us/entra/architecture/security-operations-user-accounts
+author: Mike Sosa
+date: 2026-11-04
+tags:
+    - attack.persistence
+    - attack.credential-access
+    - attack.defense-impairment
+    - attack.t1556.006
+logsource:
+    product: azure
+    service: auditlogs
+detection:
+    selection:
+        LoggedByService: 'Authentication Methods'
+        OperationName:
+            - 'User registered security info'
+            - 'Admin registered security info'
+            - 'User deleted security info'
+            - 'Admin deleted security info'
+    condition: selection
+falsepositives:
+    - Users enrolling or replacing an authentication method, for example after getting a new phone
+    - Help desk staff registering or resetting a method on a user's behalf
+level: low

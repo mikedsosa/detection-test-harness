@@ -1,0 +1,37 @@
+title: Entra ID Authentication Method Change After Risk Detection
+id: 91f24285-9c48-46ec-9823-9ada26e1ec0e
+status: experimental
+description: |
+    Detects a medium or high Microsoft Entra ID Protection risk detection and a security info (authentication method) registration or deletion on the same user within 24 hours.
+    An attacker who holds a user's password or session token may register their own MFA method to keep access after a password reset.
+    The correlation is unordered on purpose, because offline risk detections can be logged after the activity they describe.
+    The 24 hour window is a starting point and should be tuned to the environment.
+references:
+    - https://learn.microsoft.com/en-us/graph/api/resources/riskdetection?view=graph-rest-1.0
+    - https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-audit-activities
+    - https://learn.microsoft.com/en-us/entra/architecture/security-operations-user-accounts
+    - https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks
+    - https://github.com/mikedsosa/entra-account-compromise-ir/blob/0b47ee7095487b5edc43dd3a87ecc1ecc55f65a9/queries/08-auth-method-change-after-risk.kql
+author: Mike Sosa
+date: 2026-11-04
+tags:
+    - attack.persistence
+    - attack.credential-access
+    - attack.defense-impairment
+    - attack.t1556.006
+correlation:
+    type: temporal
+    rules:
+        - azure_identity_protection_user_risk_medium_high
+        - azure_auditlogs_security_info_change
+    group-by:
+        - user
+    timespan: 24h
+    aliases:
+        user:
+            azure_identity_protection_user_risk_medium_high: userPrincipalName
+            azure_auditlogs_security_info_change: TargetResources.userPrincipalName
+falsepositives:
+    - A user who is flagged as risky and then legitimately re-registers MFA as part of remediation, for example after a help desk password reset
+    - Self-service password reset or combined registration flows that follow a benign risk detection
+level: high
