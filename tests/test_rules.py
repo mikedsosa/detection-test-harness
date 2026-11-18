@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 EXPECTED_STATUS = {
     "K03": ENGINE_UNSUPPORTED,
     "K03a": PASS,
-    "K06": FAIL,
+    "K06": PASS,
     "K08": PASS,
     "K09": PASS,
     "S15555": PASS,
@@ -45,9 +45,11 @@ def test_status_is_unchanged(outcomes, rule_id):
     assert outcomes[rule_id].status == EXPECTED_STATUS[rule_id], outcomes[rule_id]
 
 
-def test_k06_false_positive_is_the_disabled_delete_action(outcomes):
-    assert outcomes["K06"].unexpected == ["kai"]
+def test_k06_does_not_flag_a_disabled_delete_action(outcomes):
+    assert "kai" not in outcomes["K06"].hits
+    assert outcomes["K06"].unexpected == []
     assert outcomes["K06"].missed == []
+    assert outcomes["K06"].status == PASS
 
 
 def test_results_file_matches_a_fresh_run(outcomes):

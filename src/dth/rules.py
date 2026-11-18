@@ -13,7 +13,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 RULES = ROOT / "rules"
 
-ENTRA_IR = "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a"
+ENTRA_IR = "mikedsosa/entra-account-compromise-ir@9840541c6bbdaaacd6e7323a585a4524ae6302e7"
 SIGMA_MASTER = "SigmaHQ/sigma@54967d64e6dda2b4daa81f47f7a8bf1f591b68a0 (master)"
 
 
@@ -79,7 +79,8 @@ REGISTRY: tuple[Rule, ...] = (
         observe=_f("ivan"),
         notes="ivan uses Set-Mailbox, which this inbox-rule query does not claim to cover. "
         "kai's row (Set-InboxRule with DeleteMessage=False) is an assumed audit shape, "
-        "not verified against tenant logs.",
+        "not verified against tenant logs. After entra-account-compromise-ir@9840541, "
+        "that row is no longer a hit.",
     ),
     Rule(
         "K08",

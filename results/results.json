@@ -33,20 +33,17 @@
     "hits": [
       "gabe",
       "hana",
-      "kai",
       "lena"
     ],
     "kind": "kql",
     "missed": [],
     "observed": [],
     "owner": "mike",
-    "rows": 4,
+    "rows": 3,
     "rule": "K06",
     "scenario": "inbox_forwarding",
-    "status": "FAIL",
-    "unexpected": [
-      "kai"
-    ]
+    "status": "PASS",
+    "unexpected": []
   },
   {
     "detail": "",

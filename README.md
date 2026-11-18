@@ -78,7 +78,7 @@ Run on 17 Nov 2026 with Python 3.13.5, duckdb-kql 1.1.3, DuckDB 2.0.0, pySigma 1
 | --- | --- | --- | --- | --- |
 | K03 | duckdb-kql | ENGINE_UNSUPPORTED | - | - |
 | K03a (adapted) | duckdb-kql | PASS | alice, carmen | - |
-| K06 | duckdb-kql | **FAIL** | gabe, hana, kai, lena | kai |
+| K06 | duckdb-kql | PASS | gabe, hana, lena | - |
 | K08 | duckdb-kql | PASS | mara | - |
 | K09 | duckdb-kql | PASS | dana, eli | - |
 | S15555 | duckdb-kql | PASS | tara, wade | - |
@@ -90,11 +90,12 @@ Run on 17 Nov 2026 with Python 3.13.5, duckdb-kql 1.1.3, DuckDB 2.0.0, pySigma 1
 | SG-SPRAY | pySigma sqlite | PASS | rita | - |
 | SG-DEVCODE | pySigma sqlite | FIELD_MISSING | - | - |
 
-Totals: 10 PASS, 1 FAIL, 1 ENGINE_UNSUPPORTED, 1 FIELD_MISSING, out of 13 rule runs. All 10 mutation checks (9 KQL, 1 Sigma correlation) expose their control user. 45 tests pass.
+Totals: 11 PASS, 1 ENGINE_UNSUPPORTED, 1 FIELD_MISSING, out of 13 rule runs. All 10 mutation checks (9 KQL, 1 Sigma correlation) expose their control user. 45 tests pass.
+
+Query 06 was refreshed after `entra-account-compromise-ir@9840541` (merged 2026-11-18 01:44 UTC). It now treats the boolean hide/delete parameters as a hit only when the value is true, so the `Set-InboxRule` control user with `DeleteMessage=False` no longer fires. The audit row shape for that case is still my assumption and has not been checked against tenant logs.
 
 What the non-PASS rows mean:
 
-- **K06 FAIL.** Query 06 matches parameter names as text, so a `Set-InboxRule` that turns a delete action *off* (`DeleteMessage=False`) is flagged as a hide/delete rule. That is a false positive by the query's own description. The audit row shape for that case is my assumption and has not been checked against tenant logs. A fix would check the parameter value, not only the name. The query is unchanged here.
 - **K03 ENGINE_UNSUPPORTED.** duckdb-kql 1.1.3 has no mapping for `make_set_if`. K03a runs the same query with that one aggregate rewritten as `make_set(iff(...))`, which only affects a display column. The original query has still not been executed anywhere.
 - **SG-DEVCODE FIELD_MISSING.** The rule matches `properties.message`, which is not a column in Sentinel's `SigninLogs`. With this harness's flattening (no field-mapping pipeline), it cannot be evaluated. It would need a mapping to `AuthenticationProtocol` or a different source log shape.
 - **K08 vs SG-CORR on quinn.** Query 08 looks only forward from the risk event; the Sigma correlation draft is unordered on purpose. On the "registration first, risk logged later" case, the correlation fires and the KQL query does not. That is recorded, not scored, for K08.

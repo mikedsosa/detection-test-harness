@@ -2,22 +2,22 @@
   "kql/03-mfa-fatigue.kql": {
     "owner": "mike",
     "sha256": "cc9ed7f6898efdcd146a64b24724dbae7411c910b619b2efc4a681ceebc7d435",
-    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/03-mfa-fatigue.kql"
+    "source": "mikedsosa/entra-account-compromise-ir@9840541c6bbdaaacd6e7323a585a4524ae6302e7 queries/03-mfa-fatigue.kql"
   },
   "kql/06-inbox-rule-changes.kql": {
     "owner": "mike",
-    "sha256": "862f9ad6f37b775cbf303619a403b8bd863847c8c6f82036fb480b5a689fb166",
-    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/06-inbox-rule-changes.kql"
+    "sha256": "0aa35d5ed54965736775e407265c56628a6fadc8ffa995976ace7f4757edc0c4",
+    "source": "mikedsosa/entra-account-compromise-ir@9840541c6bbdaaacd6e7323a585a4524ae6302e7 queries/06-inbox-rule-changes.kql"
   },
   "kql/08-auth-method-change-after-risk.kql": {
     "owner": "mike",
     "sha256": "c58eda71f8023512cb87c7112deba1e311408d43946123175f848d3a8069528d",
-    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/08-auth-method-change-after-risk.kql"
+    "source": "mikedsosa/entra-account-compromise-ir@9840541c6bbdaaacd6e7323a585a4524ae6302e7 queries/08-auth-method-change-after-risk.kql"
   },
   "kql/09-device-code-signins.kql": {
     "owner": "mike",
     "sha256": "143f5ccec71abcb163b1d797acb4e12e9a05dad4bfe1863d39a81782a7167444",
-    "source": "mikedsosa/entra-account-compromise-ir@b91d453fc93d00f010a24e346d12ab3120adf18a queries/09-device-code-signins.kql"
+    "source": "mikedsosa/entra-account-compromise-ir@9840541c6bbdaaacd6e7323a585a4524ae6302e7 queries/09-device-code-signins.kql"
   },
   "kql/SuccessfulSignInAfterAccountDisabled.yaml": {
     "owner": "mike",
