@@ -37,17 +37,17 @@
   "sigma/mike-draft/azure_auditlogs_security_info_change.yml": {
     "owner": "mike",
     "sha256": "74cc7805042f1340d83cd349dbaade333ab7f7606dc6876bbb04d2a5fd3c8019",
-    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (Sigma correlation rules are on hold, see #5759)"
+    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (SigmaHQ/sigma does not accept correlation rules yet; see open PR SigmaHQ/sigma#5759, \"Add Correlation Support\")"
   },
   "sigma/mike-draft/azure_identity_protection_user_risk_medium_high.yml": {
     "owner": "mike",
     "sha256": "9541093797adac1c5b0398550d4e60e4ff5201654e12cab5e32fb320a761ff68",
-    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (Sigma correlation rules are on hold, see #5759)"
+    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (SigmaHQ/sigma does not accept correlation rules yet; see open PR SigmaHQ/sigma#5759, \"Add Correlation Support\")"
   },
   "sigma/mike-draft/correlation_azure_auth_method_change_after_risk.yml": {
     "owner": "mike",
     "sha256": "4ffb30e0bd64cf63829202bdb24be5e0e88ec6607b6ef396ba58a92a31b418d5",
-    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (Sigma correlation rules are on hold, see #5759)"
+    "source": "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ c5ea96fd1069547135f60fe75bf231aa54f485a8 (SigmaHQ/sigma does not accept correlation rules yet; see open PR SigmaHQ/sigma#5759, \"Add Correlation Support\")"
   },
   "sigma/upstream/azure_app_device_code_authentication.yml": {
     "owner": "upstream",

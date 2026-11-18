@@ -35,7 +35,7 @@ No network calls, cloud accounts, paid APIs, or LLMs are used at run time. Insta
 | SG-SPRAY | Azure Identity Protection password spray | SigmaHQ | SigmaHQ/sigma master `54967d6` |
 | SG-DEVCODE | Azure application device code authentication | SigmaHQ | SigmaHQ/sigma master `54967d6` |
 
-The upstream SigmaHQ rules are included for context next to my own rules for the same scenarios. Exact source commits and SHA-256 hashes of every vendored file are in [`rules/PROVENANCE.json`](rules/PROVENANCE.json), and a test fails if a vendored file drifts. SigmaHQ rules are under the Detection Rule License (DRL) 1.1; their author fields are kept unchanged.
+The upstream SigmaHQ rules are included for context next to my own rules for the same scenarios. Exact source commits and SHA-256 hashes of every vendored file are in [`rules/PROVENANCE.json`](rules/PROVENANCE.json), and a test fails if a vendored file drifts. SigmaHQ rules are under the [Detection Rule License (DRL) 1.1](https://github.com/SigmaHQ/Detection-Rule-License/blob/main/LICENSE.Detection.Rules.md); their author fields are kept unchanged.
 
 ### Scenarios
 
@@ -124,4 +124,4 @@ scripts/         record_provenance.py
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT for the harness code, docs, and my own rules. See [LICENSE](LICENSE). The four SigmaHQ rules in `rules/sigma/upstream/` are not covered by the MIT license. They are under the [Detection Rule License (DRL) 1.1](https://github.com/SigmaHQ/Detection-Rule-License/blob/main/LICENSE.Detection.Rules.md), with their `author` fields unchanged and their source commit recorded in `rules/PROVENANCE.json`.

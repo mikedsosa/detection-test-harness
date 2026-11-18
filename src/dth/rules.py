@@ -146,7 +146,7 @@ REGISTRY: tuple[Rule, ...] = (
         "auth_method_after_risk",
         "mike",
         "Unpublished draft, local branch correlation-entra-risk-then-auth-method @ "
-        "c5ea96fd1069547135f60fe75bf231aa54f485a8 (Sigma correlation rules are on hold, see #5759)",
+        "c5ea96fd1069547135f60fe75bf231aa54f485a8 (SigmaHQ/sigma does not accept correlation rules yet; see open PR SigmaHQ/sigma#5759, \"Add Correlation Support\")",
         fire=_f("mara", "quinn"),
         no_fire=_f("nico", "omar", "pia"),
         notes="Temporal correlation is unordered, so quinn (registration before the risk "
