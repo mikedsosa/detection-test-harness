@@ -120,3 +120,7 @@ results/         RESULTS.md and results.json from the last `dth run --out result
 tests/           data, engine, rule, and mutation tests
 scripts/         record_provenance.py
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).
